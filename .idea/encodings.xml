@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gmall-client/service-activity-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-cart-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-item-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-list-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-order-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-payment-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/service-product-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-client/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/common-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/rabbit-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/service-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-common/web-util/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-gateway/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-model/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-activity/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-cart/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-item/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-list/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-mq/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-order/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-payment/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-product/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-task/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/service-user/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gmall-web/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ware-manage/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../../maven3.9.4-repository/org/springframework/boot/spring-boot-starter-parent/2.3.6.RELEASE/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

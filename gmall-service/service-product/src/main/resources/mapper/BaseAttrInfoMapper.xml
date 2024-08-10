@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 非必要属性：namespace 接口全路径-->
+<mapper namespace="com.atguigu.gmall.product.mapper.BaseAttrInfoMapper">
+    <!--
+        结果集映射
+        id:     唯一标识
+        type:   结果集返回类型
+        autoMapping:    自动映射实体类于数据库字段表的字段名
+    -->
+
+    <resultMap id="BaseAttrInfoMap"
+               type="com.atguigu.gmall.model.product.BaseAttrInfo"
+               autoMapping="true">
+        <!--
+           id: 表示主键
+             property:  实体类的属性名
+             column:    数据库{sql 语句执行之后}对应的字段名
+           result: 表示普通字段
+        -->
+        <id property="id" column="id"></id>
+        <!--
+            一个平台属性名对应多个平台属性值 attrValueList
+            ofType: 表示当前这个集合对象的泛型
+        -->
+        <collection property="attrValueList"
+                    ofType="com.atguigu.gmall.model.product.BaseAttrValue"
+                    autoMapping="true">
+            <id property="id" column="value_id"></id>
+        </collection>
+
+    </resultMap>
+
+    <sql id="attrSql">
+        bai.id,
+        bai.attr_name,
+        bai.category_id,
+        bai.category_level,
+        bav.id value_id,
+        bav.value_name
+    </sql>
+
+    <!--
+        id: 表示方法名称
+        resultMap:      表示返回结果集的映射
+        resultType:     表示当前返回具体类型
+    -->
+    <select id="selectAttrInfoList"
+            resultMap="BaseAttrInfoMap">
+        select
+        <include refid="attrSql"></include>
+        from base_attr_info bai inner join base_attr_value bav
+        on bai.id = bav.attr_id
+        <where>
+            <trim prefix="(" suffix=")">
+                <if test="category1Id!=null and category1Id!=''">
+                    (bai.category_id = #{category1Id} and category_level = 1)
+                </if>
+                <if test="category2Id!=null and category2Id!=''">
+                    or (bai.category_id = #{category2Id} and category_level = 2)
+                </if>
+                <if test="category3Id!=null and category3Id!=''">
+                    or (bai.category_id = #{category3Id} and category_level = 3)
+                </if>
+            </trim>
+        </where>
+        and bai.is_deleted = 0
+        and bav.is_deleted = 0
+        order by bai.id
+        /*where ((category_id = 2 and category_level = 1)
+        or (category_id = 13 and category_level = 2)
+        or (category_id = 61 and category_level = 3));*/
+    </select>
+<!--    根据skuId 查询平台属性-->
+    <select id="selectAttrList"
+            resultMap="BaseAttrInfoMap">
+        select
+        <include refid="attrSql"></include>
+        from base_attr_info bai
+        inner join base_attr_value bav
+        on bai.id = bav.attr_id
+        inner join sku_attr_value sav
+        on sav.value_id = bav.id and sav.sku_id = #{skuId};
+    </select>
+
+</mapper>
